@@ -22,6 +22,7 @@ const Home = () => {
         const findId = users.find((user) => user.id === id)
 
         axios.delete()
+        .then()
     }
 
     
