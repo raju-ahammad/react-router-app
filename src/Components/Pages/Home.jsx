@@ -23,6 +23,7 @@ const Home = () => {
 
         axios.delete()
         .then()
+        .catch()
     }
 
     
