@@ -32,7 +32,7 @@ const AddUser = () => {
 
     return (
         <div className="container m-5">
-            <div className="card shadow-lg">
+            <div className="card shadow-lg ml-md-5" style={{ width:"70%"}}>
                 <h1 className="m-auto mt-4">Add User</h1>
                 <form onSubmit={(e)=> handleUserSubmit(e)} className="row g-3 p-5">
                 <div className="col-md-12">

@@ -19,14 +19,14 @@ const Home = () => {
     }
 
     const userDelete = (id) => {
-        const findId = users.find((user) => user.id === id)
-
-        axios.delete()
-        .then()
-        .catch()
+        axios.delete(`${baseUrl}/${id}`)
+        .then(res => {
+            loadUser()
+            console.log(res)
+        })
+        .catch(err => console.log(err))
+        
     }
-
-    
 
     console.log(users);
     return (
@@ -52,7 +52,7 @@ const Home = () => {
                                     <td>{user.email}</td>
                                     <td>
                                         <Link className="btn btn-primary mr-2" to={`/${user.id}`}>View</Link>
-                                        <button className="btn btn-danger mr-2">Delete</button>
+                                        <button className="btn btn-danger mr-2" onClick={()=>userDelete(`${user.id}`)}>Delete</button>
                                         <Link className="btn btn-outline-primary" to={`edit/${user.id}`}>Edit</Link>
                                     </td>
                                 </tr>
